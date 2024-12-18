@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cavalo</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <h1 class="text-center">Editar Cavalo</h1>
+    <form method="POST">
+        <div class="form-group">
+            <label for="name">Nome do Cavalo</label>
+            <input type="text" name="name" id="name" class="form-control" value="{{ cavalo.name }}" required>
+        </div>
+        <div class="form-group">
+            <label for="race">Raça do Cavalo</label>
+            <input type="text" name="race" id="race" class="form-control" value="{{ cavalo.race }}">
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Voltar</a>
+    </form>
+</div>
+</body>
+</html>

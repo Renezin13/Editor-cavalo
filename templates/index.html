@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border: none;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    a.btn {
+      width: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container text-center">
+    <div class="card p-5 rounded-lg">
+      <h1 class="mb-4">Bem-vindo, Amigo!</h1>
+      <p class="lead">Escolha uma opção abaixo para continuar:</p>
+      <div class="d-flex justify-content-center mt-3">
+        <a href="{{ url_for('login') }}" class="btn btn-primary mx-2">Logar-se</a>
+        <a href="{{ url_for('register') }}" class="btn btn-success mx-2">Registrar-se</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
